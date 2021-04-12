@@ -1,0 +1,8 @@
+com/chat/websocket/WebSocketHandler.class
+com/chat/Application.class
+com/chat/pojo/User.class
+com/chat/pojo/Message.class
+com/chat/pojo/LoginRequest.class
+com/chat/config/WebSocketConfig.class
+com/chat/enums/MessageType.class
+com/chat/controller/AppController.class
