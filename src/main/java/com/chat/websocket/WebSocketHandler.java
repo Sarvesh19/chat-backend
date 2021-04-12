@@ -34,10 +34,7 @@ public class WebSocketHandler extends TextWebSocketHandler {
 
   @Override
   public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception {
-	  if(status.getReason() != null) {
-		    sessions.remove(session);
- 
-	  }
+    sessions.remove(session);
     logger.info("Removed Websocket session, total number of sessions are " + sessions.size());
   }
 }
