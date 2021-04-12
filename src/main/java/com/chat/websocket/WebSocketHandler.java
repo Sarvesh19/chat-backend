@@ -26,5 +26,18 @@ public class WebSocketHandler extends TextWebSocketHandler {
     }
   }
 
+  @Override
+  public void afterConnectionEstablished(WebSocketSession session) {
+    sessions.add(session);
+    logger.info("Added Websocket session, total number of sessions are " + sessions.size());
+  }
 
+  @Override
+  public void afterConnectionClosed(WebSocketSession session, CloseStatus status) throws Exception {
+	  if(status.getReason() != null) {
+		    sessions.remove(session);
+ 
+	  }
+    logger.info("Removed Websocket session, total number of sessions are " + sessions.size());
+  }
 }
